@@ -70,11 +70,16 @@ class Flow {
 		var flowList = new List<Flow>();
 
 		foreach(var gameObject in gameObjects) {
+
+			var origin = gameObject.transform.FindChild ("Origin");
+			var destiny = gameObject.transform.FindChild ("Destiny");
+
 			Flow flow = new Flow();
+
 			flow.center = new float[] {gameObject.transform.position.x, gameObject.transform.position.y};
 
-			flow.origin = new float[] {gameObject.transform.FindChild("Origin").transform.position.x, gameObject.transform.FindChild("Origin").transform.position.y};
-			flow.destiny = new float[] {gameObject.transform.FindChild("Destiny").transform.position.x, gameObject.transform.FindChild("Destiny").transform.position.y};
+			flow.origin = new float[] {origin.transform.localPosition.x, origin.transform.localPosition.y};
+			flow.destiny = new float[] {destiny.transform.localPosition.x, destiny.transform.localPosition.y};
 
 			flowList.Add(flow);
 		}
@@ -180,16 +185,22 @@ class MyWindow : EditorWindow {
 
 	[MenuItem ("blau/Serialize Level")]
 	public static void  ShowWindow () {
-		EditorWindow.GetWindow(typeof(MyWindow));
+		MyWindow window = ((MyWindow)EditorWindow.GetWindow(typeof(MyWindow)));
+		window.UpdateJson ();
+		window.Show ();
 	}
 
 	void OnGUI () {
 		// The actual window code goes here'
 
-		if(json == "") {
+		if (json == "") {
 			json = JsonUtility.ToJson(Level.GetLevel()).ToString();
 		}
 
-		EditorGUI.TextArea(this.position, json);
+		EditorGUI.TextArea(new Rect(Vector2.zero, this.position.size), json);
+	}
+
+	public void UpdateJson() {
+		json = JsonUtility.ToJson(Level.GetLevel()).ToString();;
 	}
 }
