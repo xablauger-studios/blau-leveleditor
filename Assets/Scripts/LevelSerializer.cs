@@ -182,6 +182,7 @@ class Level {
 class MyWindow : EditorWindow {
 
 	public string json = "";
+	public float timeToUpdate = 1000.0f;
 
 	[MenuItem ("blau/Serialize Level")]
 	public static void  ShowWindow () {
@@ -197,10 +198,18 @@ class MyWindow : EditorWindow {
 			json = JsonUtility.ToJson(Level.GetLevel()).ToString();
 		}
 
-		EditorGUI.TextArea(new Rect(Vector2.zero, this.position.size), json);
+		GUILayout.BeginVertical ();
+		GUILayout.TextArea (json);
+		//EditorGUI.TextArea(new Rect(Vector2.zero, this.position.size), json);
+
+		if (GUILayout.Button ("Update")) {
+			this.UpdateJson ();
+		}
+
+		GUILayout.EndVertical ();
 	}
 
 	public void UpdateJson() {
-		json = JsonUtility.ToJson(Level.GetLevel()).ToString();;
+		json = JsonUtility.ToJson(Level.GetLevel()).ToString();
 	}
 }
