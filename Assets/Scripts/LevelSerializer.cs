@@ -187,6 +187,7 @@ class MyWindow : EditorWindow {
 	[MenuItem ("blau/Serialize Level")]
 	public static void  ShowWindow () {
 		MyWindow window = ((MyWindow)EditorWindow.GetWindow(typeof(MyWindow)));
+		window.titleContent = new GUIContent ("Serialized Level");
 		window.UpdateJson ();
 		window.Show ();
 	}
@@ -200,7 +201,6 @@ class MyWindow : EditorWindow {
 
 		GUILayout.BeginVertical ();
 		GUILayout.TextArea (json);
-		//EditorGUI.TextArea(new Rect(Vector2.zero, this.position.size), json);
 
 		if (GUILayout.Button ("Update")) {
 			this.UpdateJson ();
