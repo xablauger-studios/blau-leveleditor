@@ -16,7 +16,6 @@
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
-- [Credits](#credits)
 
 ## The Game
 
