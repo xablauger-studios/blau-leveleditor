@@ -1,6 +1,6 @@
 <p align="center">
   <a href="www.blaugame.com">
-    <img alt="Logo" src="docs/images/logo_editor.png" width="500px">
+    <img alt="Logo" src="Docs/images/logo_editor.png" width="500px">
   </a>
 </p>
 
@@ -21,7 +21,7 @@
 
 <p align="center">
   <a href="https://itunes.apple.com/br/app/blau/id1150066458">
-    <img alt="Logo" src="docs/images/logo_game.png" width="450px">
+    <img alt="Logo" src="Docs/images/logo_game.png" width="450px">
   </a>
 </p>
 
@@ -34,7 +34,7 @@ then evolves with physics, but the end is up to you**.
 
 <p align="center">
   <a href="https://itunes.apple.com/br/app/blau/id1150066458">
-    <img alt="Download on the App Store" src="docs/images/badge.png" width="150px">
+    <img alt="Download on the App Store" src="Docs/images/badge.png" width="150px">
   </a>
 </p>
 
@@ -119,7 +119,7 @@ Here's a simple example of a *level* `object`:
 Which is rendered to the following level scene:
 
 <p align="center">
-  <img alt="Level 1" src="docs/images/demo_level_1.png" width="450px">
+  <img alt="Level 1" src="Docs/images/demo_level_1.png" width="450px">
 </p>
 
 As can be noticed, data described in our *JSON* model consist basically of
