@@ -264,3 +264,17 @@ If everything goes right, you should see a window with a compressed
 | Vortex Field           | <img alt="Vortex Field" src="Docs/Images/Elements/Editor/vortex_outer.png" width="75px">         | <img alt="Vortex Field" src="Docs/Images/Elements/Rendered/vortex_outer.png" width="75px">  |
 | Flow Emitter/Receiver  | <img alt="Flow Emitter/Receiver" src="Docs/Images/Elements/Editor/checkpoint.png" width="65px">  | <img alt="Flow Emitter/flow" src="Docs/Images/Elements/Rendered/flow.png" width="65px">     |
 
+## Contributing
+
+Contributions are very welcome! If you'd like to contribute, 
+[these guidelines](.github/contributing.md) may help you.
+
+## License
+
+- [Blau Game Official Level Editor](https://github.com/xalbauger-studios/blau-leveleditor) 
+source code is licensed under the [MIT License](LICENSE.md).
+
+- Other stuff related to *Blau Game* itself - e.g. logo and visual identity - 
+which are available in this repo are licensed under the [Creative Commons  Attribution-NonCommercial-NoDerivatives 4.0 International](http://creativecommons.org/licenses/by-nc-nd/4.0/) License.
+
+- The *Download on the App Store* badge has *All Rights Reserved to Apple Inc*.
